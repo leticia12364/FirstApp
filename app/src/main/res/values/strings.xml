@@ -6,5 +6,7 @@
     <string name="Telefone"> Digite seu telefone: </string>
     <string name="Email"> Digite o seu E-email::</string>
     <string name="Botão"> Enviar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

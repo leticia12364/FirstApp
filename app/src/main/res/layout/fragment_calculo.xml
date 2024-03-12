@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="50px">
+    android:layout_height="match_parent"
+    tools:context=".view.CalculoFragment"
+    android:orientation="vertical">
+
 
 
     <TextView
@@ -17,7 +19,7 @@
     <EditText
         android:id="@+id/edtName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:hint="@string/Nome"
         android:layout_marginTop="24sp"/>
 
@@ -33,7 +35,7 @@
     <EditText
         android:id="@+id/edtIdade"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:hint="Digite o seu ano de nascimento:"
         android:layout_marginTop="24sp" />
 
@@ -49,4 +51,3 @@
 
 
 </LinearLayout>
-
