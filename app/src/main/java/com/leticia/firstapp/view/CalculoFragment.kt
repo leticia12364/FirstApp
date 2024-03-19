@@ -6,10 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.leticia.firstapp.R
-import com.leticia.firstapp.databinding.ActivityMainBinding
 import com.leticia.firstapp.databinding.FragmentCalculoBinding
 import java.time.LocalDateTime
-
 
 class CalculoFragment : Fragment() {
     private var _binding: FragmentCalculoBinding? = null
