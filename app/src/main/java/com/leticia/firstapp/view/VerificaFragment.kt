@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.leticia.firstapp.R
-import com.leticia.firstapp.databinding.FragmentCalculoBinding
+//import com.leticia.firstapp.R
+//import com.leticia.firstapp.databinding.FragmentPessoaBinding
 import com.leticia.firstapp.databinding.FragmentVerificaBinding
 
 

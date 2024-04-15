@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/lblNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome: "
+                android:textStyle="bold"
+                android:textSize="16sp">
+
+            </TextView>
+
+
+
+            <TextView
+                android:id="@+id/tvNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gabriel "
+                android:layout_marginEnd="3dp">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imgMasculino"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="3dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/masculino_1_removebg_preview" />
+
+
+            <ImageView
+                android:id="@+id/imgFeminino"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/feminino_1_removebg_preview" />
+
+            <TextView
+                android:id="@+id/lblIdade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Idade: "
+                android:textStyle="bold"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvIdade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18"
+                android:layout_marginEnd="20dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/lblFaixaEtaria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faixa: "
+                android:textStyle="bold"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvFaixa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginEnd="20dp"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
