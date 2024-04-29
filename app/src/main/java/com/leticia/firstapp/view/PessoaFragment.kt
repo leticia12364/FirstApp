@@ -1,5 +1,6 @@
 package com.leticia.firstapp.view
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -28,12 +29,19 @@ class PessoaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //Carregar a pessoa caso tenha selecionado
+        arguments?.let {
+            viewModel.getPessoa(it.getInt("pessoaId"))
+        }
+
         binding.btnEnviar.setOnClickListener {
             var nome = binding.edtName.editableText.toString()
             var anoNascimento = binding.edtIdade.editableText.toString()
 
 
-            if (nome!= "" && anoNascimento != "") {
+            if (nome!= "" && anoNascimento != ""  ){
+            // && binding.rbmasculino.isChecked || binding.rbfeminino.isCheckd) {
 
 
                 val anoAtual = LocalDateTime.now().year
@@ -64,7 +72,15 @@ class PessoaFragment : Fragment() {
                     sexo = sexo
                 )
 
-                viewModel.insert(pessoa)
+                viewModel.pessoa.value?.let {
+                    pessoa.id = it.id
+                    viewModel.update(pessoa)
+
+                }?: run {
+                    viewModel.insert(pessoa)
+                }
+
+
 
                 binding.edtName.editableText.clear()
                 binding.edtIdade.editableText.clear()
@@ -74,6 +90,32 @@ class PessoaFragment : Fragment() {
             }
             //override fun onItemSelected(parent: AdapterView?,view: View?,position: Int, id: Long{
             //Toast.makeText(requireContext(), sexos[position], Toast.LENGTH_LONG).show()
+        }
+
+        binding.btnDeletar.setOnClickListener {
+            AlertDialog.Builder(requireContext())
+                .setTitle("Exclusão de pessoa")
+                .setMessage("Você realmente deseja excluir?")
+                .setPositiveButton("Sim"){_,_->
+                    viewModel.delete(viewModel.pessoa.value?.id?:0)
+                    findNavController().navigateUp()
+                }
+                .setNegativeButton("Não"){_,_->}
+                .show()
+
+        }
+
+        viewModel.pessoa.observe(viewLifecycleOwner){pessoa ->
+            binding.edtName.setText(pessoa.nome)
+            binding.edtIdade.setText((LocalDateTime.now().year - pessoa.idade).toString())
+
+            if (pessoa.sexo == "Masculino"){
+                binding.masculino.isChecked = true
+            } else {
+                binding.feminino.isChecked = true
+
+            }
+            binding.btnDeletar.visibility = View.VISIBLE
         }
     }
 }

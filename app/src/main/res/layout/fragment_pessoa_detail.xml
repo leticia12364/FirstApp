@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.PessoaDetailFragment"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome:"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Letícia"
+        android:layout_marginEnd="3dp"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/lblName"
+        app:layout_constraintTop_toTopOf="@+id/lblName"
+        app:layout_constraintBottom_toBottomOf="@+id/lblName"/>
+    <TextView
+        android:id="@+id/lblIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idade:"
+        android:textSize="24sp"
+        android:layout_marginTop="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvIdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 18"
+        android:layout_marginEnd="3dp"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@+id/lblIdade"
+        app:layout_constraintBottom_toBottomOf="@+id/lblIdade"
+        app:layout_constraintStart_toEndOf="@+id/lblIdade"/>
+
+    <TextView
+        android:id="@+id/lblSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sexo:"
+        android:textSize="24sp"
+        android:layout_marginTop="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@+id/lblIdade"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivMasculino"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:visibility="gone"
+        android:src="@drawable/masculino_1_removebg_preview"
+        app:layout_constraintBottom_toTopOf="@+id/lblFaixa"
+        app:layout_constraintStart_toEndOf="@+id/lblSexo"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdade" />
+    <ImageView
+        android:id="@+id/ivFeminino"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/feminino_1_removebg_preview"
+        app:layout_constraintStart_toEndOf="@+id/lblSexo"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdade"
+        app:layout_constraintBottom_toTopOf="@+id/lblFaixa"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/lblFaixa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Faixa Etária:"
+        android:textSize="24sp"
+        android:layout_marginTop="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblSexo"/>
+
+    <TextView
+        android:id="@+id/tvFaixa1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Adolescente"
+        android:layout_marginEnd="3dp"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@+id/lblFaixa"
+        app:layout_constraintBottom_toBottomOf="@+id/lblFaixa"
+        app:layout_constraintStart_toEndOf="@+id/lblFaixa"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

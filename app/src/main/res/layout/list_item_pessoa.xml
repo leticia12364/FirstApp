@@ -9,6 +9,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="4dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,9 +24,9 @@
                 android:layout_height="wrap_content"
                 android:text="Nome: "
                 android:textStyle="bold"
-                android:textSize="16sp">
+                android:textSize="16sp"/>
 
-            </TextView>
+
 
 
 
@@ -32,9 +35,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gabriel "
-                android:layout_marginEnd="3dp">
+                android:layout_marginEnd="3dp"/>
 
-            </TextView>
+
 
             <ImageView
                 android:id="@+id/imgMasculino"
@@ -61,18 +64,17 @@
                 android:layout_height="wrap_content"
                 android:text="Idade: "
                 android:textStyle="bold"
-                android:textSize="16sp">
+                android:textSize="16sp"/>
 
-            </TextView>
 
             <TextView
                 android:id="@+id/tvIdade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="18"
-                android:layout_marginEnd="20dp">
+                android:layout_marginEnd="20dp"/>
 
-            </TextView>
+
 
             <TextView
                 android:id="@+id/lblFaixaEtaria"
@@ -80,9 +82,9 @@
                 android:layout_height="wrap_content"
                 android:text="Faixa: "
                 android:textStyle="bold"
-                android:textSize="16sp">
+                android:textSize="16sp"/>
 
-            </TextView>
+
 
             <TextView
                 android:id="@+id/tvFaixa"
@@ -92,6 +94,8 @@
                 android:layout_marginEnd="20dp"/>
 
         </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
 
